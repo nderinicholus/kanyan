@@ -12,9 +12,8 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
-  rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -23,8 +22,8 @@
 <body>
     <div class="relative">
 
-        <header class="fixed w-full py-4 px-5 z-10 bg-red-900">
-            <nav class="flex justify-between items-center max-container sticky top-0">
+        <header class="w-full py-6 px-5 z-10 bg-red-900 fixed">
+            <nav class="flex justify-between items-center max-container top-0">
                 <a href="#" class="flex items-center">
                     <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -53,128 +52,74 @@
 
 
         {{-- Carousel --}}
-        <div
-  id="carouselExampleCrossfade"
-  class="relative"
-  data-te-carousel-init
-  data-te-ride="carousel">
-  <!--Carousel indicators-->
-  <div
-    class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-    data-te-carousel-indicators>
-    <button
-      type="button"
-      data-te-target="#carouselExampleCrossfade"
-      data-te-slide-to="0"
-      data-te-carousel-active
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-current="true"
-      aria-label="Slide 1"></button>
-    <button
-      type="button"
-      data-te-target="#carouselExampleCrossfade"
-      data-te-slide-to="1"
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-label="Slide 2"></button>
-    <button
-      type="button"
-      data-te-target="#carouselExampleCrossfade"
-      data-te-slide-to="2"
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-label="Slide 3"></button>
-  </div>
+        <div id="carouselExampleCrossfade" class="relative" data-te-carousel-init data-te-ride="carousel">
+            <!--Carousel indicators-->
+            <div class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+                data-te-carousel-indicators>
+                <button type="button" data-te-target="#carouselExampleCrossfade" data-te-slide-to="0"
+                    data-te-carousel-active
+                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-te-target="#carouselExampleCrossfade" data-te-slide-to="1"
+                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-te-target="#carouselExampleCrossfade" data-te-slide-to="2"
+                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    aria-label="Slide 3"></button>
+            </div>
 
-  <!--Carousel items-->
-  <div
-    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-    <!--First item-->
-    <div
-      class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-te-carousel-fade
-      data-te-carousel-item
-      data-te-carousel-active>
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-        class="block w-full"
-        alt="Wild Landscape" />
-    </div>
-    <!--Second item-->
-    <div
-      class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-te-carousel-fade
-      data-te-carousel-item>
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-        class="block w-full"
-        alt="Camera" />
-    </div>
-    <!--Third item-->
-    <div
-      class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-te-carousel-fade
-      data-te-carousel-item>
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-        class="block w-full"
-        alt="Exotic Fruits" />
-    </div>
-  </div>
+            <!--Carousel items-->
+            <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+                <!--First item-->
+                <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
+                    <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="block w-full"
+                        alt="Wild Landscape" />
+                </div>
+                <!--Second item-->
+                <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    data-te-carousel-fade data-te-carousel-item>
+                    <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block w-full" alt="Camera" />
+                </div>
+                <!--Third item-->
+                <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    data-te-carousel-fade data-te-carousel-item>
+                    <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="block w-full"
+                        alt="Exotic Fruits" />
+                </div>
+            </div>
 
-  <!--Carousel controls - prev item-->
-  <button
-    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-te-target="#carouselExampleCrossfade"
-    data-te-slide="prev">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Previous</span
-    >
-  </button>
-  <!--Carousel controls - next item-->
-  <button
-    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-te-target="#carouselExampleCrossfade"
-    data-te-slide="next">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Next</span
-    >
-  </button>
-</div>
+            <!--Carousel controls - prev item-->
+            <button
+                class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                type="button" data-te-target="#carouselExampleCrossfade" data-te-slide="prev">
+                <span class="inline-block h-8 w-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </span>
+                <span
+                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+            </button>
+            <!--Carousel controls - next item-->
+            <button
+                class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                type="button" data-te-target="#carouselExampleCrossfade" data-te-slide="next">
+                <span class="inline-block h-8 w-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </span>
+                <span
+                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+            </button>
+        </div>
         {{-- Carousel --}}
 
         {{-- About us --}}
-        <div class="flex flex-row gap-5 max-lg:flex-col items-center">
+        <div class="flex flex-row gap-5 max-lg:flex-col-reverse items-center">
             <div class="w-1/2 max-lg:w-full">
                 <img src="{{ asset('images/about.jpg') }}" alt="" class="w-full">
             </div>
@@ -231,77 +176,79 @@
 
 
         {{--  Products --}}
-        <div class="container">
-            <h1 class="text-center my-10 text-5xl uppercase font-semibold vibes text-red-900">Our Products</h1>
-            <div class="flex flex-row justify-center items-center px-5 mt-10 mb-10 gap-1 max-sm:flex-col">
+        <div class="flex flex-row justify-center items-center max-sm:flex-col px-5 mt-10 mb-10 gap-1">
 
-                <div class="w-1/3 max-sm:w-full max-sm:py-10">
 
-                    <div class="overflow-hidden pb-5">
-                        <img class="hover:scale-150 transition-all mb-5" src="{{ asset('images/about.jpg') }}"
-                            alt="">
-                    </div>
-                    <h3 class="flex justify-center text-red-900 uppercase border-t-2 border-t-slate-300 pt-2 font-semibold  hover:text-slate-500  items-center">Lorem ipsum dolor sit
-                        amet.</h3>
+            <div class="w-1/3 max-sm:w-full max-sm:py-10">
+
+                <div class="overflow-hidden pb-5">
+                    <img class="hover:scale-150 transition-all mb-5" src="{{ asset('images/about.jpg') }}"
+                        alt="">
                 </div>
+                <h3
+                    class="flex justify-center text-red-900 uppercase border-t-2 border-t-slate-300 pt-2 font-semibold  hover:text-slate-500  items-center">
+                    Lorem ipsum dolor sit
+                    amet.</h3>
+            </div>
 
-                <div class="w-1/3 max-sm:w-full max-sm:py-10">
+            <div class="w-1/3 max-sm:w-full max-sm:py-10">
 
-                    <div class="overflow-hidden pb-5">
-                        <img class="hover:scale-150 transition-all mb-5" src="{{ asset('images/about.jpg') }}"
-                            alt="">
-                    </div>
-                    <h3 class="flex justify-center text-red-900 uppercase border-t-2 border-t-slate-300 pt-2 font-semibold  hover:text-slate-500  items-center">Lorem ipsum dolor sit
-                        amet.</h3>
-
+                <div class="overflow-hidden pb-5">
+                    <img class="hover:scale-150 transition-all mb-5" src="{{ asset('images/about.jpg') }}"
+                        alt="">
                 </div>
+                <h3
+                    class="flex justify-center text-red-900 uppercase border-t-2 border-t-slate-300 pt-2 font-semibold  hover:text-slate-500  items-center">
+                    Lorem ipsum dolor sit
+                    amet.</h3>
 
-                <div class="w-1/3 max-sm:w-full max-sm:py-10">
-                    <div class="overflow-hidden pb-5">
-                        <img class="hover:scale-150 transition-all mb-5" src="{{ asset('images/about.jpg') }}"
-                            alt="">
-                    </div>
-                    <h3 class="flex justify-center text-red-900 uppercase border-t-2 border-t-slate-300 pt-2 font-semibold  hover:text-slate-500  items-center">Lorem ipsum dolor sit
-                        amet.</h3>
+            </div>
+
+            <div class="w-1/3 max-sm:w-full max-sm:py-10">
+                <div class="overflow-hidden pb-5">
+                    <img class="hover:scale-150 transition-all mb-5" src="{{ asset('images/about.jpg') }}"
+                        alt="">
                 </div>
+                <h3
+                    class="flex justify-center text-red-900 uppercase border-t-2 border-t-slate-300 pt-2 font-semibold  hover:text-slate-500  items-center">
+                    Lorem ipsum dolor sit
+                    amet.</h3>
             </div>
         </div>
         {{--  Products --}}
 
         {{-- Contacts --}}
-        <div class="container">
-            <div class="flex flex-row justify-center bg-slate-300 px-10 py-10 gap-5 max-sm:flex-col">
+        <div class="flex flex-row justify-center bg-slate-300 px-10 py-10 gap-5 max-sm:flex-col">
 
-                <div class="w-1/3 max-md:w-full max-sm:py-0">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-                    <div class="pt-4">
-                        <p>Mon - Fri: 8am to 5pm,</p>
-                        <p>Sat: 9am to 1pm</p>
-                    </div>
-
+            <div class="w-1/3 max-md:w-full max-sm:py-0">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                <div class="pt-4">
+                    <p>Mon - Fri: 8am to 5pm,</p>
+                    <p>Sat: 9am to 1pm</p>
                 </div>
 
-                <div class="w-1/3 max-md:w-full max-sm:py-0">
-                    <h3 class="uppercase font-semibold text-lg">Contacts</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    <p>Phone: Lorem ipsum dolor sit amet.</p>
-                    <p>Email: info@kanyanaberdarecheese.com.</p>
-                </div>
+            </div>
 
-                <div class="w-1/3 max-md:w-full max-sm:py-0">
-                    <h3 class="uppercase font-semibold text-lg">Social Media</h3>
-                    <p>Facebook: ipsum dolor sit amet consectetur adipisicing.</p>
-                    <p>Instagram: Lorem ipsum dolor sit amet. </p>
-                </div>
+            <div class="w-1/3 max-md:w-full max-sm:py-0">
+                <h3 class="uppercase font-semibold text-lg">Contacts</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <p>Phone: Lorem ipsum dolor sit amet.</p>
+                <p>Email: info@kanyanaberdarecheese.com.</p>
+            </div>
+
+            <div class="w-1/3 max-md:w-full max-sm:py-0">
+                <h3 class="uppercase font-semibold text-lg">Social Media</h3>
+                <p class="text-lg text-red-900 font-medium"><i class="fa-brands fa-facebook"></i> <a href=""
+                        target="_blank" class="hover:text-slate-500">Lorem ipsum dolor sit amet.</a> </p>
+                <p class="text-lg text-red-900 font-medium"><i class="fa-brands fa-instagram"></i> <a href=""
+                        target="_blank" class="hover:text-slate-500">Lorem ipsum dolor sit amet.</a> </p>
             </div>
         </div>
         {{-- Contacts --}}
 
         {{-- Footer --}}
-        <div class="container">
-            <div class="flex justify-center items-center bg-red-900 py-3">
-                <div class="copyright text-white text-sm"> @php echo 'Kanyan ' . '@'  . date('Y') . ' All rights reserved' @endphp
-                </div>
+        <div class="flex justify-center items-center bg-red-900 py-3">
+            <div class="copyright text-white text-sm"> @php echo 'Kanyan ' . '@'  . date('Y') . ' All rights reserved' @endphp
             </div>
         </div>
         {{-- Footer --}}
